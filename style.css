@@ -40,7 +40,7 @@ body{
 .box button{
     width: 200px;
     height: 60px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     outline: none;
     font-weight: bold;
     border: 1px solid rgb(211, 210, 210);
@@ -52,9 +52,13 @@ body{
 .box-button{
     width: 300px;
     height: 55px;
+    margin-top: 20px;
 }
 .box-button span{
     font-size: medium;
+}
+.box-input{
+    margin-top: -85px;
 }
 .box-input input{
     position: relative;
@@ -75,7 +79,7 @@ body{
 .box-about{
     width: 340px;
     height: 55px;
-    margin-top: 50px;
+    margin-top: -30px;
 }
 .box-process h4{
     font-weight: normal;
@@ -84,6 +88,7 @@ body{
 .box-checkbox{
     width: auto;
     height: 20px;
+    margin-top: -15px;
 }
 .bottom{
     position: absolute;
