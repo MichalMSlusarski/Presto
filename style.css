@@ -3,12 +3,12 @@ body{
 }
 .container{
     position: absolute;
-    top: 60%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #fff;
-    width: 450px;
-    height: 550px;
+    width: 425px;
+    height: 500px;
     border-radius: 20px;
     box-shadow: 0 5px rgb(110, 110, 110,.2);
     display: flex;
@@ -28,8 +28,8 @@ body{
     justify-content: space-evenly;
 }
 .box button{
-    width: 170px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     background-color: #fff;
     outline: none;
     font-weight: bold;
@@ -39,9 +39,11 @@ body{
     justify-content: center;
     font-family: 'Poppins', sans-serif;
 }
-.box-button i{
-    color: #00acee;
-    font-size: 1.8rem;
+.box-button{
+    margin-top: -60px;
+}
+.box-button span{
+    font-size: medium;
 }
 .box-input input{
     position: relative;
@@ -60,7 +62,12 @@ body{
     font-size: 1rem;
 }
 .box-about{
+    margin-top: 50px;
     margin-bottom: -30px;
+}
+.box-process h4{
+    font-weight: normal;
+    margin-left: -45px;
 }
 .box-process{
     margin-bottom: -20px;
