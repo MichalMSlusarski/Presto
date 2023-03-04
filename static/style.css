@@ -44,7 +44,7 @@ body{
     outline: none;
     font-weight: bold;
     border: 1px solid rgb(211, 210, 210);
-    box-shadow: 0 3px rgb(110, 110, 110,.2);
+    box-shadow: 0 2px rgb(110, 110, 110,.2);
     border-radius: 20px;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
@@ -58,7 +58,7 @@ body{
     font-size: medium;
 }
 .box-input{
-    margin-top: -85px;
+    margin-top: -95px;
 }
 .box-input input{
     position: relative;
@@ -76,13 +76,20 @@ body{
 .box-input input::placeholder{
     font-size: 1rem;
 }
+.box-about-title{
+    width: 340px;
+    height: 55px;
+    margin-top: -50px;
+}
 .box-about{
     width: 340px;
     height: 55px;
-    margin-top: -30px;
+    margin-top: 0px;
+    line-height: 22px;
 }
 .box-process h4{
     font-weight: normal;
+    margin-top: -2px;
     margin-left: -9px;
 }
 .box-checkbox{
@@ -105,6 +112,10 @@ body{
     width: 340px;
     height: 55px;
     font-size: small;
+    text-align-last: center;
+}
+.inter{
+    font-weight: lighter;
 }
 
 
