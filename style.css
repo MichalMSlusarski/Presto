@@ -1,6 +1,16 @@
 body{
     background-color: rgb(228, 228, 228);
 }
+.top{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .container{
     position: absolute;
     top: 40%;
@@ -23,7 +33,7 @@ body{
 }
 .box{
     width: 375px;
-    height: 240px;
+    height: 200px;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -40,7 +50,8 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .box-button{
-    margin-top: -60px;
+    width: 300px;
+    height: 55px;
 }
 .box-button span{
     font-size: medium;
@@ -62,18 +73,31 @@ body{
     font-size: 1rem;
 }
 .box-about{
+    width: 340px;
+    height: 55px;
     margin-top: 50px;
-    margin-bottom: -30px;
 }
 .box-process h4{
     font-weight: normal;
-    margin-left: -45px;
-}
-.box-process{
-    margin-bottom: -20px;
+    margin-left: -9px;
 }
 .box-checkbox{
-    margin-top: 20px;
+    width: auto;
+    height: 20px;
+}
+.bottom{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottom span{
+    width: 340px;
+    height: 55px;
 }
 
 
