@@ -51,6 +51,8 @@ body{
     justify-content: space-evenly;
 }
 .box button{
+    position: absolute;
+    top: 83%;
     width: 152px;
     height: 60px;
     background-color: rgb(255, 255, 255);
@@ -77,7 +79,7 @@ body{
 .box-about-title{
     width: 340px;
     height: 55px;
-    margin-top: -50px;
+    margin-top: -40%;
 }
 .bottom{
     position: absolute;
