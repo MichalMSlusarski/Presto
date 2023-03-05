@@ -12,13 +12,12 @@ body{
     align-items: center;
 }
 .container{
-    opacity: 1;
     position: absolute;
+    z-index: 2;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: rgb(245, 245, 245);
-    width: 425px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0 4px 11px rgb(0 0 0 / 0.2);
@@ -27,6 +26,19 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+}
+.container {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+    @keyframes fadeInAnimation {
+        0% {
+            width: 425px;
+        }
+        100% {
+            width: 850px;
+        }
 }
 .box, .box button{
     display: flex;
@@ -39,7 +51,7 @@ body{
     justify-content: space-evenly;
 }
 .box button{
-    width: 200px;
+    width: 152px;
     height: 60px;
     background-color: rgb(255, 255, 255);
     outline: none;
@@ -55,57 +67,21 @@ body{
     height: 55px;
     margin-top: 20px;
 }
-.box-button span{
-    font-size: medium;
-}
 .box-button:hover{
     scale: 1.05;
     transition: scale 10ms;
 }
-.box-input{
-    margin-top: -95px;
-}
-.box-input input{
-    position: relative;
-    width: 300px;
-    height: 45px;
-    outline: none;
-    border: 1px solid rgb(211, 210, 210);
-    border-radius: 4px;
-    padding-left: 10px;
-}
-.box-input input label{
-    position: absolute;
-    top: 0;
-}
-.box-input input::placeholder{
-    font-size: 1rem;
+.box-button span{
+    font-size: medium;
 }
 .box-about-title{
     width: 340px;
     height: 55px;
     margin-top: -50px;
 }
-.box-about{
-    width: 340px;
-    height: 55px;
-    margin-top: 0px;
-    line-height: 22px;
-}
-.box-process h4{
-    font-weight: normal;
-    margin-top: -2px;
-    margin-left: -9px;
-}
-.box-checkbox{
-    font-size: small;
-    width: auto;
-    height: 20px;
-    margin-top: -15px;
-}
 .bottom{
     position: absolute;
-    top: 110%;
+    top: 72.78%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -116,11 +92,37 @@ body{
 .bottom span{
     width: 340px;
     height: 55px;
+    font-family: 'Poppins', sans-serif;
     font-size: small;
     text-align-last: center;
 }
-.inter{
-    font-weight: lighter;
+.members{
+    position: absolute;
+    z-index: 1;
+    top: 23%;
+    justify-self: left;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    font-weight: bold;
+    box-shadow: 0 4px 11px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+}
+.members {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+    @keyframes leftInAnimation {
+        0% {
+            left: 25%;
+        }
+        100% {
+            left: 21.3%;
+        }
 }
 
 
