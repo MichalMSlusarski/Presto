@@ -2,6 +2,14 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+idea = {
+    'author': 'anonymous1',
+    'premise': 'I think we should ',
+    'content': 'use singleton pattern here',
+    'author-id': 'anon@',
+    'current-upvotes': 3
+}
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -16,7 +24,7 @@ def ideaboard_guest():
 
 @app.route('/add')
 def add():
-    return render_template('add_idea.html')
+    return render_template('add_idea.html', idea = idea)
 
 @app.route('/about')
 def about():
