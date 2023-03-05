@@ -100,6 +100,7 @@ body{
     position: absolute;
     z-index: 1;
     top: 23%;
+    left: 50%;
     justify-self: left;
     justify-content: center;
     align-items: center;
@@ -112,16 +113,17 @@ body{
     border-radius: 20px;
 }
 .members {
-    animation: fadeInAnimation ease 3s;
+    animation: leftInAnimation ease 1s;
+    animation-delay: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
     @keyframes leftInAnimation {
         0% {
-            left: 25%;
+            left: 50%;
         }
         100% {
-            left: 21.3%;
+            left: 22.5%;
         }
 }
 
