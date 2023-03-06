@@ -7,8 +7,10 @@
     <title>Your board</title>
     <link rel="stylesheet" href="../static/style_board.css" />
     <link rel="icon" type="image/x-icon" href="../static/Image/presto-logo.png">
+    <script src="script.js"></script> 
 </head>
 <body>
+    <script src="script.js"></script> 
         <div class="top">
             <i class="fab fa-presto">
                 <img src="../static/Image/presto-logo.png" alt="create presto" width="80">
@@ -18,21 +20,18 @@
             <div class="box box-input">
                 <input type="text" placeholder="Describe your presto here..." name="board-title" id="1" maxlength="37">
             </div>
-            <!-- <div class="box box-about">
-                <h4>Session time left: <span class="inter">34 minutes</span>
+        </div>
+        <div class="main two">
+            <div class="box box-about-title">
+                <h4>Link to this presto: 
+                    <span class="session-link" id="session-link">wwww.itspresto.space/board/123456789abcd</span>
+                    <button onclick="copyToClipboard()" id="copy-button">Copy link</button>
                 </h4>
-            </div> -->
+            </div>
         </div>
         <div class="box box-button">
             <button>
                 <span>Add new idea💡</span>
             </button>
         </div>
-        <!-- <div class="bottom">
-            <span>
-                Presto is completely free to use, with no account required. </br></br></br>
-                © Michał Ślusarski, 2023. </br></br>
-                .  
-            </span>
-        </div> -->
 </body>
