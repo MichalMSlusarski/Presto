@@ -4,7 +4,7 @@ body{
 }
 .top{
     position: relative;
-    width: 425;
+    width: 330;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,9 +14,9 @@ body{
     opacity: 1;
     position: relative;
     background: rgb(245, 245, 245);
-    width: 425px;
-    height: 500px;
-    margin: 10px auto 30px auto;
+    width: 400px;
+    height: 450px;
+    margin: 10px auto 20px auto;
     border-radius: 20px;
     box-shadow: 0 4px 11px rgb(0 0 0 / 0.2);
     display: flex;
@@ -32,10 +32,10 @@ body{
 }
     @keyframes fadeInAnimation {
         0% {
-            height: 500px;
+            height: 450px;
         }
         100% {
-            height: 650px;
+            height: 100px;
         }
 }
 .box, .box button{
@@ -43,13 +43,17 @@ body{
     align-items: center;
 }
 .box{
-    width: 375px;
+    width: 300px;
     height: 200px;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .box-button{
-    margin-top: 20px;
+    margin: 5px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 180px;
     height: 45px;
 }
@@ -60,7 +64,7 @@ body{
     outline: none;
     font-weight: bold;
     border: 1px solid rgb(211, 210, 210);
-    box-shadow: 0 2px rgb(110, 110, 110,.2);
+    box-shadow: 0 4px 11px rgb(0 0 0 / 0.2);
     border-radius: 20px;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
@@ -76,15 +80,14 @@ body{
 }
 .box-input{
     height: 45px;
-    margin-top: -25px;
 }
 .box-input input{
     position: relative;
     width: 340px;
     height: 45px;
     outline: none;
-    border: 1px solid rgb(211, 210, 210);
-    border-radius: 4px;
+    border: 0px;
+    background-color: transparent;
     padding-left: 10px;
 }
 .box-input input label{
