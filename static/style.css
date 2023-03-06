@@ -2,28 +2,21 @@ body{
     background-color: rgb(219, 217, 217);
     overflow: scroll;
 }
-.all{
-    position: absolute;
-}
 .top{
-    position: fixed;
-    top: 7%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
+    width: 425;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.container{
+.main{
     opacity: 1;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
     background: rgb(245, 245, 245);
     width: 425px;
     height: 500px;
+    margin: 10px auto 30px auto;
     border-radius: 20px;
     box-shadow: 0 4px 11px rgb(0 0 0 / 0.2);
     display: flex;
@@ -32,6 +25,10 @@ body{
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
+/* .main:hover{
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+} */
 .box, .box button{
     display: flex;
     align-items: center;
@@ -43,6 +40,7 @@ body{
     justify-content: space-evenly;
 }
 .box-button{
+    margin-top: 20px;
     width: 180px;
     height: 45px;
 }
@@ -59,18 +57,17 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .box-button button:hover{
-    scale: 1.025;
     background-color: rgb(226, 226, 226);
     box-shadow: 0 0px rgba(197, 197, 197, 0.2);
     transition: background-color 0.2s;
     transition: box-shadow 0.2s;
-    transition: scale 0.2s;
 }
 .box-button button span{
     font-size: medium;
 }
 .box-input{
-    margin-top: -95px;
+    height: 45px;
+    margin-top: -25px;
 }
 .box-input input{
     position: relative;
@@ -82,8 +79,7 @@ body{
     padding-left: 10px;
 }
 .box-input input label{
-    position: fixed;
-    top: 0;
+    position: relative;
 }
 .box-input input::placeholder{
     font-size: 1rem;
@@ -95,7 +91,6 @@ body{
 .box-about{
     width: 340px;
     height: 55px;
-    margin-top: 0px;
     line-height: 22px;
 }
 .box-process h4{
@@ -104,17 +99,14 @@ body{
     margin-left: -9px;
 }
 .box-checkbox{
-    position: fixed;
-    top: 75%;
+    position: relative;
+    margin-top: 20px;
     font-size: small;
     width: auto;
     height: 20px;
 }
 .bottom{
-    position: fixed;
-    top: 72.78%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,6 +122,3 @@ body{
 .inter{
     font-weight: lighter;
 }
-
-
-
