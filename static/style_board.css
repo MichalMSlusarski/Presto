@@ -105,6 +105,11 @@ body{
 .inter{
     font-weight: lighter;
 }
-
+.two{
+    height: 50px;
+}
+.box-about-title h5{
+    width: 350px;
+}
 
 
