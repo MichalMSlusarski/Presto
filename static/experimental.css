@@ -57,12 +57,10 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .box-button button:hover{
-    scale: 1.025;
     background-color: rgb(226, 226, 226);
     box-shadow: 0 0px rgba(197, 197, 197, 0.2);
     transition: background-color 0.2s;
     transition: box-shadow 0.2s;
-    transition: scale 0.2s;
 }
 .box-button button span{
     font-size: medium;
