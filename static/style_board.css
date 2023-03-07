@@ -113,8 +113,11 @@ body{
     flex-direction: row;
 }
 .box-about-title h5{
-    width: 250x;
+    width: 240px;
     margin: 0 0 0 0;
+}
+.box-about-title input{
+    width: 130px;
 }
 .box-about-title button{
     margin: 0 0 0 0;
