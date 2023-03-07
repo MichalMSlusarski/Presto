@@ -108,8 +108,19 @@ body{
 .two{
     height: 50px;
 }
+.box-about-title{
+    width: 340px;
+    flex-direction: row;
+}
 .box-about-title h5{
-    width: 350px;
+    width: 250x;
+    margin: 0 0 0 0;
+}
+.box-about-title button{
+    margin: 0 0 0 0;
+    border: 0ch;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 

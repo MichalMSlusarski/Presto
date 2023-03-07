@@ -10,5 +10,5 @@ function copyToClipboard() {
 
     var tooltip = document.getElementById("copy-button");
 
-    tooltip.innerText = "Copied!"
+    tooltip.innerText = "Copied! ✅"
   } 
