@@ -43,7 +43,7 @@ class Idea extends HTMLElement {
             opacity: 1;
             position: relative;
             width: 400px;
-            height: 70px;
+            min-height: 70px;
             animation: fadeInAnimation ease 0.25s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
@@ -71,18 +71,16 @@ class Idea extends HTMLElement {
   
   addNewLine() {
     const textarea = this.shadowRoot.querySelector('textarea');
+    const box = this.shadowRoot.querySelector('.box');
+    const boxHeight = box.style.height;
     const value = textarea.value;
+    const additionalHeight = 50; // set this to the additional padding or margin that you want to include
   
     if (value.length % 20 === 0) {
       textarea.value = value + "\n";
-      const box = this.shadowRoot.querySelector('div');
-      //const boxHeight = box.offsetHeight;
-      //const lineHeight = parseInt(window.getComputedStyle(textarea, null).getPropertyValue('line-height'), 10);
-      //const newBoxHeight = boxHeight + lineHeight + 10;
-      box.style.height = "300px"; //`${newBoxHeight}px`;
+      box.style.height = `${boxHeight + additionalHeight}px`;
     }
   }
-  
 }
   
 customElements.define('idea-box', Idea);
