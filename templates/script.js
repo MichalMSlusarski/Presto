@@ -75,11 +75,11 @@ class Idea extends HTMLElement {
   
     if (value.length % 20 === 0) {
       textarea.value = value + "\n";
-      const box = this.shadowRoot.querySelector('box');
-      const boxHeight = box.offsetHeight;
-      const lineHeight = parseInt(window.getComputedStyle(textarea, null).getPropertyValue('line-height'), 10);
-      const newBoxHeight = boxHeight + lineHeight + 10;
-      box.style.height = `${newBoxHeight}px`;
+      const box = this.shadowRoot.querySelector('div');
+      //const boxHeight = box.offsetHeight;
+      //const lineHeight = parseInt(window.getComputedStyle(textarea, null).getPropertyValue('line-height'), 10);
+      //const newBoxHeight = boxHeight + lineHeight + 10;
+      box.style.height = "300px"; //`${newBoxHeight}px`;
     }
   }
   
