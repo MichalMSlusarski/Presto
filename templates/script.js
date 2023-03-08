@@ -12,11 +12,11 @@ function copyToClipboard() {
 }
 
 class Idea extends HTMLElement {
-    constructor() {
-      super();
-      const template = document.createElement('template');
-      template.innerHTML = `
-        <style>
+  constructor() {
+    super();
+    const template = document.createElement('template');
+    template.innerHTML = `
+          <style>
           :host {
             display: block;
             font-family: 'Poppins', sans-serif;
@@ -49,38 +49,47 @@ class Idea extends HTMLElement {
             animation-fill-mode: forwards;
           }
           
-          input[type="text"] {
+          textarea {
             background-color: transparent;
             border: none;
             outline: none;
             font-size: 12px;
             font-weight: normal;
-            padding: 20px;
+            padding: 30px;
             width: 100%;
             box-sizing: border-box;
+            white-space: pre-wrap;
+            resize: none;
           }
         </style>
         <div class="box">
-          <input type="text" placeholder="What's your idea?" name="idea-box" id="1" maxlength="120" spellcheck="true">
+          <textarea placeholder="What's your idea?" wrap="soft" name="idea-box" maxlength="120" spellcheck="true"></textarea>
         </div>
       `;
-      this.attachShadow({ mode: 'open' }).appendChild(template.content.cloneNode(true));
+    this.attachShadow({ mode: 'open' }).appendChild(template.content.cloneNode(true));
+  }
+  
+  addNewLine() {
+    const textarea = this.shadowRoot.querySelector('textarea');
+    const value = textarea.value;
+    if (value.length % 20 === 0) {
+      textarea.value = value + "\n";
     }
   }
+}
   
 customElements.define('idea-box', Idea);
 
 function addIdea() {
-    //var mainDiv = document.getElementById("main");
     var boxButton = document.getElementById("boxbutton");
     const elemDiv = document.createElement('idea-box');
     
-    //elemDiv.style.cssText = "opacity: 1; position: relative; background: rgb(245, 245, 245); width: 400px; height: 100px; margin: 10px auto 20px auto; border-radius: 20px; box-shadow: 0 4px 11px #9ecaed; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif;"
-
     document.body.appendChild(elemDiv);
     document.body.insertBefore(elemDiv, boxButton);
 
 }
+
+
 
 
   
