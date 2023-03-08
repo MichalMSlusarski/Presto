@@ -31,7 +31,7 @@ class Idea extends HTMLElement {
                 }
             }
           
-          .box {
+          .idea {
             background-color: #F5F5F5;
             border-radius: 20px;
             box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
@@ -62,8 +62,8 @@ class Idea extends HTMLElement {
             resize: none;
           }
         </style>
-        <div class="box">
-          <textarea placeholder="What's your idea?" wrap="soft" name="idea-box" maxlength="120" spellcheck="true"></textarea>
+        <div class="idea">
+          <textarea placeholder="What's your idea?" wrap="soft" name="idea-box" maxlength="120" rows="1" spellcheck="true"></textarea>
         </div>
       `;
     this.attachShadow({ mode: 'open' }).appendChild(template.content.cloneNode(true));
@@ -71,10 +71,9 @@ class Idea extends HTMLElement {
   
   addNewLine() {
     const textarea = this.shadowRoot.querySelector('textarea');
-    const box = this.shadowRoot.querySelector('.box');
-    const boxHeight = box.style.height;
+    const box = this.shadowRoot.querySelector('.idea');
     const value = textarea.value;
-    const additionalHeight = 50; // set this to the additional padding or margin that you want to include
+    const additionalHeight = 50;
   
     if (value.length % 20 === 0) {
       textarea.value = value + "\n";
