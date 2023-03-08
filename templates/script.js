@@ -72,10 +72,17 @@ class Idea extends HTMLElement {
   addNewLine() {
     const textarea = this.shadowRoot.querySelector('textarea');
     const value = textarea.value;
+  
     if (value.length % 20 === 0) {
       textarea.value = value + "\n";
+      const box = this.shadowRoot.querySelector('box');
+      const boxHeight = box.offsetHeight;
+      const lineHeight = parseInt(window.getComputedStyle(textarea, null).getPropertyValue('line-height'), 10);
+      const newBoxHeight = boxHeight + lineHeight + 10;
+      box.style.height = `${newBoxHeight}px`;
     }
   }
+  
 }
   
 customElements.define('idea-box', Idea);
@@ -86,7 +93,6 @@ function addIdea() {
     
     document.body.appendChild(elemDiv);
     document.body.insertBefore(elemDiv, boxButton);
-
 }
 
 
