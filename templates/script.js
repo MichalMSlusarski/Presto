@@ -83,10 +83,11 @@ class Idea extends HTMLElement {
   
     textarea.style.height = 'auto'; // reset height to auto to get accurate scrollHeight
     const prevScrollHeight = textarea.scrollHeight;
-    textarea.value += 'x'; // add a new character to trigger possible overflow
-    const hasOverflow = textarea.scrollHeight > prevScrollHeight;
+    textarea.value += ''; // add a new character to trigger possible overflow
+    const hasOverflown = textarea.scrollHeight > prevScrollHeight;
   
-    if (hasOverflow) {
+    if (hasOverflown) {
+      linecount++;
       box.style.height = `${box.clientHeight + additionalHeight}px`;
     }
     textarea.style.height = `${textarea.scrollHeight}px`; // set the textarea height to fit its content
