@@ -105,7 +105,8 @@ function addIdea() {
     const elemDiv = document.createElement('idea-box');
     
     document.body.appendChild(elemDiv);
-    document.body.insertBefore(elemDiv, boxButton);
+    //document.body.insertBefore(elemDiv, boxButton);
+    boxButton.after(elemDiv);
 }
 
 
