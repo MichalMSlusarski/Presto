@@ -96,17 +96,39 @@ class Idea extends HTMLElement {
   
 }
 
-
-  
 customElements.define('idea-box', Idea);
 
+var isSubmitBtn = false;
+var elemDiv;
+var boxButton;
+var boxSpan;
+
 function addIdea() {
-    var boxButton = document.getElementById("boxbutton");
-    const elemDiv = document.createElement('idea-box');
-    
+    boxSpan.innerText = "Submit idea🐰";
+    elemDiv = document.createElement('idea-box');
     document.body.appendChild(elemDiv);
-    //document.body.insertBefore(elemDiv, boxButton);
-    boxButton.after(elemDiv);
+    document.body.insertBefore(elemDiv, boxButton); //-> after clicking "Add new idea"
+    isSubmitBtn = true;
+}
+
+function submitIdea() {
+    boxSpan.innerText = "Add new idea💡";
+    
+    boxButton.after(elemDiv); //after clicking "Submit"
+    isSubmitBtn = false;
+}
+
+function mainBtn() {
+
+  boxButton = document.getElementById("boxbutton");
+  boxSpan = document.getElementById("boxtext");
+
+  if (!isSubmitBtn) {
+    addIdea();    
+  }
+  else {
+    submitIdea();
+  }
 }
 
 
