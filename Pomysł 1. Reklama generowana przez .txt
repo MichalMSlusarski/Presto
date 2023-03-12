@@ -1,0 +1,2 @@
+Pomysł 1.: Reklama generowana przez AI - badanie eye-tracking materiałów z osobami wygenerowanymi przez sztuczną inteligencję (modele dyfuzji).
+Cel badania: Sprawdzić, czy jest różnica w tym jak ludzie postrzegają zdjęcia prawdziwych ludzi, a jak wygenerowanych sztucznie.
