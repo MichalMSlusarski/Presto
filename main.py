@@ -32,10 +32,6 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.title}','{self.content}','{self.additional_img}','{self.label}','{self.likes}')"
 
-ideas = [
-    idea, idea2
-]
-
 @app.route('/')
 def index():
     return render_template('index.html')
