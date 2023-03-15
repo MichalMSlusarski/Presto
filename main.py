@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -26,8 +26,18 @@ ideas = [
 def index():
     return render_template('index.html')
 
-@app.route('/ideaboard')
+@app.route('/ideaboard', methods=['GET', 'POST'])
 def ideaboard():
+    if request.method == 'POST':
+        if request.form.get('create_presto') == 'VALUE1':
+            pass # do something
+        elif  request.form.get('action2') == 'VALUE2':
+            pass # do something else
+        else:
+            pass # unknown
+    elif request.method == 'GET':
+        return render_template('ideaboard.html')
+    
     return render_template('ideaboard.html')
 
 @app.route('/ideaboard-guest')
