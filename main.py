@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-
 app = Flask(__name__)
 
 app.config['SECRET KEY'] = '455638289da72dc40b6d536f3b26ed6d1865431d07dcf796295087d3c335c6af'
