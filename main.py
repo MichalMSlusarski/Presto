@@ -4,7 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-#app.config['SECRET KEY']
+app.config['SECRET KEY'] = '455638289da72dc40b6d536f3b26ed6d1865431d07dcf796295087d3c335c6af'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
@@ -43,10 +43,6 @@ def ideaboard():
 @app.route('/ideaboard-guest')
 def ideaboard_guest():
     return render_template('ideaboard_guest.html')
-
-@app.route('/add')
-def add():
-    return render_template('add_idea.html', idea = idea)
 
 @app.route('/about')
 def about():
