@@ -4,7 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 #app.config['SECRET KEY']
-app.config['SQLALCHEMY_DATABASE_URI'] = ''
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+db = SQLAlchemy(app)
+
+class user(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    email = db.Column(db.String(120), unique = True, nullable = False)
+    image_file = db.Column(db.String(20), nullable = False, default = 'rabbit.jpg')
 
 idea = {
     'author': 'anonymous1',
