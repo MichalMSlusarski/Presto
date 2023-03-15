@@ -32,22 +32,6 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.title}','{self.content}','{self.additional_img}','{self.label}','{self.likes}')"
 
-idea = {
-    'author': 'anonymous1',
-    'premise': 'I think we should ',
-    'content': 'use singleton pattern here',
-    'author-id': 'anon@',
-    'current-upvotes': 3
-}
-
-idea2 = {
-    'author': 'anonymous1',
-    'premise': 'I think we should ',
-    'content': 'use singleton pattern here',
-    'author-id': 'anon@',
-    'current-upvotes': 3
-}
-
 ideas = [
     idea, idea2
 ]
@@ -58,16 +42,6 @@ def index():
 
 @app.route('/ideaboard', methods=['GET', 'POST'])
 def ideaboard():
-    if request.method == 'POST':
-        if request.form.get('create_presto') == 'VALUE1':
-            pass # do something
-        elif  request.form.get('action2') == 'VALUE2':
-            pass # do something else
-        else:
-            pass # unknown
-    elif request.method == 'GET':
-        return render_template('ideaboard.html')
-    
     return render_template('ideaboard.html')
 
 @app.route('/ideaboard-guest')
