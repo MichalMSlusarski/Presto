@@ -9,16 +9,16 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
 
-class user(db.Model):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     email = db.Column(db.String(120), unique = True, nullable = False)
     image_file = db.Column(db.String(20), nullable = False, default = 'rabbit.jpg')
     posts = db.relationship('post', backref = 'author', lazy = True)
 
     def __repr__(self):
-        return f"user('{self.email}','{self.image_file}')"
+        return f"User('{self.email}','{self.image_file}')"
 
-class post(db.Model):
+class Post(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(120), unique = False, nullable = False)
     date_posted = db.Colum(db.DateTime, nullable = False, default = datetime.utcnow)
@@ -27,9 +27,10 @@ class post(db.Model):
     label = db.Column(db.String(12), unique = False, nullable = False, default = 'Defualt')
     status = db.Column(db.String(12), unique = False, nullable = False, default = 'Covered')
     likes = db.Column(db.Integer, default = 0)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable = False)
 
     def __repr__(self):
-        return f"post('{self.title}','{self.content}','{self.additional_img}','{self.label}','{self.likes}')"
+        return f"Post('{self.title}','{self.content}','{self.additional_img}','{self.label}','{self.likes}')"
 
 idea = {
     'author': 'anonymous1',
