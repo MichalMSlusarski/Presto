@@ -10,6 +10,18 @@ idea = {
     'current-upvotes': 3
 }
 
+idea2 = {
+    'author': 'anonymous1',
+    'premise': 'I think we should ',
+    'content': 'use singleton pattern here',
+    'author-id': 'anon@',
+    'current-upvotes': 3
+}
+
+ideas = [
+    idea, idea2
+]
+
 @app.route('/')
 def index():
     return render_template('index.html')
