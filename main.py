@@ -21,11 +21,14 @@ class post(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(120), unique = False, nullable = False)
     date_posted = db.Colum(db.DateTime, nullable = False, default = datetime.utcnow)
-    content = db.Column(db.String(240), unique = False, nullable = False)
+    content = db.Column(db.Text(240), unique = False, nullable = False)
     additional_img = db.Column(db.String(20), nullable = True)
     label = db.Column(db.String(12), unique = False, nullable = False, default = 'Defualt')
     status = db.Column(db.String(12), unique = False, nullable = False, default = 'Covered')
     likes = db.Column(db.Integer, default = 0)
+
+    def __repr__(self):
+        return f"post('{self.title}','{self.content}','{self.additional_img}','{self.label}','{self.likes}')"
 
 idea = {
     'author': 'anonymous1',
