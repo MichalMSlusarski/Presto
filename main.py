@@ -4,7 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-app.config['SECRET KEY'] = '455638289da72dc40b6d536f3b26ed6d1865431d07dcf796295087d3c335c6af'
+app.config['SECRET KEY'] = '455638289da72dc40b6d536f3b26ed6d1865431d07dcf796295087d3c335c6af' #this is a placeholder, since the app isn't running yet. Don't get your hopes up
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
