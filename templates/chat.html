@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Ask data</title>
+    <link rel="stylesheet" href="../static/style_chat.css" />
+    <link rel="icon" type="image/x-icon" href="../static/Image/presto-logo.png">
+    <script src="script.js"></script> 
+    
+</head>
+<body>
+    <script src="script.js"></script> 
+        <video autoplay muted loop id="myVideo">
+            <source src="../static/Image/back.mp4" type="video/mp4">
+        </video>
+        <div class="top">
+            <i class="fab fa-presto">
+                <img src="../static/Image/presto-logo.png" alt="create presto" width="80">
+            </i>
+        </div>
+        <div id="main" class="main">
+            <div class="box box-input">
+                <text id="main-text">You can ask about many things</text>
+            </div>
+        </div>
+        <div class="idea">
+            <textarea placeholder="What's your idea?" wrap="soft" name="idea-box" maxlength="120" rows="1" spellcheck="true"></textarea>
+        </div>
+        <div id ="boxbutton" class="box box-button">
+            <button onclick="mainBtn()">
+                <span id="boxtext">Ask</span>
+            </button>
+        </div>
+</body>
