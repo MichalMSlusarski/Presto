@@ -10,6 +10,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .main{
     opacity: 1;
     position: relative;
@@ -41,6 +42,8 @@ body{
 .box, .box button{
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 9999;
 }
 .box{
     width: 300px;
@@ -125,5 +128,11 @@ body{
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    }
 
