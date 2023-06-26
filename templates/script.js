@@ -104,7 +104,7 @@ var boxButton;
 var boxSpan;
 
 function addIdea() {
-    boxSpan.innerText = "Submit idea🐰";
+    boxSpan.innerText = "Ask data";
     elemDiv = document.createElement('idea-box');
     document.body.appendChild(elemDiv);
     document.body.insertBefore(elemDiv, boxButton); //-> after clicking "Add new idea"
